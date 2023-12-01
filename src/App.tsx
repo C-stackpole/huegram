@@ -20,11 +20,17 @@ function App() {
     hues: [ {id:36, color:'#ffa510', username:"kavery", likes: 15}]
   });
 
+  // useEffect( () => {
+  //   fetch()
+  //   .then( res => res.json())
+  //   .then( data => setHues(data))
+  // })
+
   const addNewHue = (color:string ) => 
   {
       console.log(color)
-      const newHue = {color, username: currentUser.username, id: hues[hues.length-1].id+1 , likes:0};
-      setHues( [...hues, newHue ] );
+      const newHue = {color, username: currentUser.username, id: length+1 , likes:0};
+      setHues( [newHue, ...hues ] );
   }
 
   return (
