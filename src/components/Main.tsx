@@ -14,8 +14,9 @@ interface Props {
 const Main = (props : Props) => {
   return (
     <>
-      <div className='flex flex-col'>
+      <div className='flex flex-col relative'>
 
+        <div className='flex absolute p-3 text-4xl font-bold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent items-center'><span className='text-5xl pr-1'>#</span>HueGram</div>
         <div className='flex justify-center'>
           <PostHue addHue={props.addHue}/>
 
