@@ -7,7 +7,7 @@ interface Props{
 const PostHue = (props:Props) => {
 
     const[color, setColor] = useState('#')
-    const inputRef = useRef(null)
+    const inputRef = useRef<HTMLInputElement>(null);
   
     const handlePostClick = () => {
       // Call your addHue function with the current color value
