@@ -1,13 +1,13 @@
-import React from "react";
 
-interface Post {
+
+interface PostObjects {
   color: string;
   username: string;
   likes: number;
 }
 
 interface Props {
-  post: Post;
+  post: PostObjects;
 }
 
 const Post = (props: Props) => {
@@ -18,7 +18,9 @@ const Post = (props: Props) => {
     >
       <p className="text-white text-2xl opacity-80">{props.post.color}</p>
 
-      <p>{props.post.username}</p>
+      <div className="bg-black text-white flex w-full justify-center rounded-b-3xl p-3">
+        <p>{props.post.username}</p>
+      </div>
     </div>
   );
 };

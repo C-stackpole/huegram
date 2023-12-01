@@ -1,16 +1,24 @@
-import React from 'react'
 import kaylee from '/kaylee.jpg'
 
 const Profile = () => {
   return (
-    <div className='flex flex-col border-2 p-8 items-center text-white'>
+    <div className='flex flex-col border-2 py-16 px-8 items-center text-white justify-between'>
 
-        <h1>@kodom</h1>
-
-        <div className="flex w-1/2">
+        <div className="flex flex-col items-center w-1/2">
             <img src={kaylee} alt="" className='rounded-full'/>
+          <h1 className='p-4'>@kodom</h1>
         </div>
 
+
+        <div className='flex flex-col p-4 gap-2 text-center'>
+          <h1 className='text-6xl'>86</h1>
+          <h1>Likes</h1>
+        </div>
+
+        <div className='flex flex-col p-4 gap-2 text-center'>
+          <h1 className='text-6xl'>4</h1>
+          <h1>Hues Posted</h1>
+        </div>
     </div>
   )
 }
