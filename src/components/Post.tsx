@@ -26,3 +26,4 @@ const Post = (props: Props) => {
 };
 
 export default Post;
+
