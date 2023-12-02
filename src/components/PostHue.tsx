@@ -7,16 +7,16 @@ interface Props{
 const PostHue = (props:Props) => {
 
     const[color, setColor] = useState('#')
-    const inputRef = useRef<HTMLInputElement>(null);
+    const previewRef = useRef<HTMLDivElement>(null);
   
     const handlePostClick = () => {
       // Call your addHue function with the current color value
       props.addHue(color);
   
       // Reset the input value
-      setColor('');
-      if (inputRef.current) {
-        inputRef.current.value = '#';
+      setColor('#');
+      if (previewRef.current) {
+        previewRef.current.style.backgroundColor = ''
       }
     };
 
@@ -24,12 +24,13 @@ const PostHue = (props:Props) => {
     <div className='flex flex-row justify-center p-4 mb-4 gap-8 h-32'>
 
         <div className='flex flex-col w-64 px-8 py-8 gap-2 justify-center rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500' style={{backgroundColor: color}}>
-            <input ref={inputRef} type="text" name="hue" id="hue" value={color} onChange={ (event) => setColor(event.target.value) } />
+            <input type="text" name="hue" id="hue" value={color} onChange={ (event) => setColor(event.target.value) } />
             <a href="#" onClick={handlePostClick} className="btn bg-white text-cyan-950 text-center">Post</a>
         </div>
 
         <div
           className="flex flex-col w-64 rounded-3xl text-center justify-between items-center"
+          ref={previewRef}
           style={{ backgroundColor: color }}
         >
           <p className="text-white text-2xl opacity-80">{color}</p>
