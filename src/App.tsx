@@ -1,23 +1,24 @@
 //import Menu from './components/Menu'
+import HueObject from './HueObject';
 import Main from './components/Main'
 import Profile from './components/Profile'
 import { useEffect, useState } from 'react'
 
 function App() {
 
-  interface Hue {
-    color: string;
-    username: string;
-    id: number;
-    likes: number;
-  }
+  // interface Hue {
+  //   color: string;
+  //   username: string;
+  //   id: number;
+  //   likes: number;
+  // }
 
-  const [hues, setHues] = useState<Hue[]>([]);
+  const [hues, setHues] = useState<HueObject[]>([]);
 
   const [currentUser] = useState({
-    username: "kavery",
+    username: "c_money",
     likes: 58,
-    hues: [ {id:36, color:'#ffa510', username:"kavery", likes: 15}]
+    hues: [ {id:36, color:'#ffa510', username:"c_money", likes: 15}]
   });
 
 
@@ -31,7 +32,7 @@ function App() {
   const addNewHue = (color:string ) => 
   {
       console.log(color)
-      const newHue: Hue = {color, username: currentUser.username, id: length+1 , likes:0};
+      const newHue = {color, username: currentUser.username, id: length+1 , likes:0, isLiked: false};
       setHues( [newHue, ...hues ] );
   }
 

@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import Hue from './Hue'
 
 interface Props{
     addHue: (color:string)=> void
@@ -42,7 +43,9 @@ const PostHue = (props:Props) => {
         </div>
     </div>
 
+    <Hue hue={ {color, username:"c_money", likes:0, isLiked:false}} />
     </div>
+
   )
 }
 

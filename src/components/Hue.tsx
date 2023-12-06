@@ -1,10 +1,4 @@
-
-interface HueObject {
-  color: string;
-  username: string;
-  likes: number;
-}
-
+import HueObject from "../HueObject";
 interface Props {
   hue: HueObject;
 }
