@@ -1,7 +1,7 @@
 import Hue from './Hue'
 import PostHue from './PostHue'
 import HueObject from '../HueObject'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 
 interface Props {
     hues: HueObject[],
@@ -14,7 +14,7 @@ const Main = (props : Props) => {
   const [searchItem, setSearchItem] = useState('')
   const [filteredUsers, setFilteredUsers] = useState(props.hues)
 
-  const handleInputChange = (e) => { 
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => { 
     const searchTerm = e.target.value;
     setSearchItem(searchTerm)
 
