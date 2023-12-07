@@ -32,7 +32,7 @@ function App() {
   const addNewHue = (color:string ) => 
   {
       console.log(color)
-      const newHue = {color, username: currentUser.username, id: length+1 , likes:0, isLiked: false};
+      const newHue = {id: hues.length+1, color, username: currentUser.username, likes:0, isLiked: false};
       setHues( [newHue, ...hues ] );
   }
 
