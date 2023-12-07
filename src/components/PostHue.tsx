@@ -39,7 +39,7 @@ const PostHue = (props:Props) => {
 
 
         <div className="bg-black text-white flex w-full text-center justify-center p-1 rounded-b-2xl">
-          <p className="text-xl">kodom</p>
+          <p className="text-xl">c_money</p>
 
         </div>
     </div>

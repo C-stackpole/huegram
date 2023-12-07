@@ -9,7 +9,7 @@ const Profile = () => {
         <div style={{backgroundColor: "#fff111"}}></div>
       </div>
 
-      <h1 className='p-4'>@c_money</h1>
+      <h1 className='p-4'>c_money</h1>
 
       <div className='flex flex-col p-4 gap-2 text-center'>
         <h1 className='text-6xl'>86</h1>

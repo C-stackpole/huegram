@@ -35,7 +35,7 @@ const Main = (props : Props) => {
       <div>
         <PostHue addHue={props.addHue}/>
       </div>
-      <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto container-snap px-8 pt-4'>
+      <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto container-snap px-8 py-4'>
 
         {searchItem == ""
         ? props.hues.map((hue) => ( <Hue hue={hue} toggleLike={props.toggleLike}/>))
