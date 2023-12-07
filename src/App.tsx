@@ -46,6 +46,7 @@ function App() {
     //console.log(newHues)
   }
 
+
   return (
     <div className='flex bg-slate-800 h-screen'>
       {/* <Menu /> */}

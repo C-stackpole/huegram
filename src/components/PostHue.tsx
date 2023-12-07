@@ -26,8 +26,8 @@ const PostHue = (props:Props) => {
     <div className='flex flex-row justify-center p-4 mb-4 gap-8 h-32'>
 
         <div className='flex flex-col w-64 px-8 py-8 gap-2 justify-center rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500' style={{backgroundColor: color}}>
-            <input type="text" name="hue" id="hue" value={color} onChange={ (event) => setColor(event.target.value) } />
-            <a href="#" onClick={handlePostClick} className="btn bg-white text-cyan-950 text-center">Post</a>
+            <input className='rounded-full px-2' type="text" name="hue" id="hue" value={color} onChange={ (event) => setColor(event.target.value) } />
+            <a href="#" onClick={handlePostClick} className="btn bg-white text-cyan-950 text-center rounded-full">Post</a>
         </div>
 
         <div
