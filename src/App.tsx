@@ -36,11 +36,21 @@ function App() {
       setHues( [newHue, ...hues ] );
   }
 
+  const toggleLikeForHue = (id?:number) =>{
+    const newHues = [...hues]
+    const hue = newHues.find(h => h.id == id)
+    if (hue){
+      hue.isLiked = !hue?.isLiked
+      setHues(newHues)
+    }
+    //console.log(newHues)
+  }
+
   return (
     <div className='flex bg-slate-800 h-screen'>
       {/* <Menu /> */}
 
-      <Main hues={hues} addHue={addNewHue} />
+      <Main hues={hues} addHue={addNewHue} toggleLike={toggleLikeForHue} />
 
       <Profile />
     </div>

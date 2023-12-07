@@ -9,6 +9,10 @@ const Profile = () => {
           <h1 className='p-4'>@kodom</h1>
         </div>
 
+        <div>
+          <div style={{backgroundColor: "#fff111"}}></div>
+        </div>
+
 
         <div className='flex flex-col p-4 gap-2 text-center'>
           <h1 className='text-6xl'>86</h1>
