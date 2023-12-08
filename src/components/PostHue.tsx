@@ -26,7 +26,7 @@ const PostHue = (props:Props) => {
   return (
     <div className='flex flex-row justify-center p-4 mb-4 gap-8 h-32'>
 
-        <div className='flex flex-col w-64 px-8 py-8 gap-2 justify-center rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500' style={{backgroundColor: color}}>
+        <div className='flex flex-col w-64 px-8  gap-2 justify-center rounded-3xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500' style={{backgroundColor: color}}>
             <input className='rounded-full px-2' type="text" name="hue" id="hue" value={color} onChange={ (event) => setColor(event.target.value) } />
             <a href="#" onClick={handlePostClick} className="btn bg-white text-cyan-950 text-center rounded-full">Post</a>
         </div>
@@ -39,7 +39,7 @@ const PostHue = (props:Props) => {
           <p className="text-white text-2xl opacity-80">{color}</p>
 
 
-        <div className="bg-black text-white flex w-full text-center justify-center p-1 rounded-b-2xl">
+        <div className="bg-black text-white flex w-full text-center justify-center p-1 rounded-b-3xl">
           <p className="text-xl">c_money</p>
 
         </div>
