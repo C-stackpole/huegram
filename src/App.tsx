@@ -42,6 +42,12 @@ function App() {
     const hue = newHues.find(h => h.id == id)
     if (hue){
       hue.isLiked = !hue?.isLiked
+      if(hue.isLiked === true){
+        hue.likes += 1
+      }
+      else{
+        hue.likes -= 1
+      }
       setHues(newHues)
     }
     //console.log(newHues)
@@ -54,7 +60,7 @@ function App() {
 
       <Main hues={hues} addHue={addNewHue} toggleLike={toggleLikeForHue} />
 
-      <Profile />
+      <Profile hues={hues} />
     </div>
   )
 }
