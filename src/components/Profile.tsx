@@ -21,9 +21,8 @@ const Profile = (props : Props) => {
   }, [props.hues]);
 
   const filteredLength = filteredUsersHues ? filteredUsersHues.length : 0;
-  const numCol = Math.ceil(Math.sqrt(filteredLength));
-  const numRow = Math.ceil(Math.sqrt(filteredLength));
-  console.log(numCol)
+  const numCol = Math.ceil(Math.sqrt(filteredLength)) || 2;
+  const numRow = Math.ceil(Math.sqrt(filteredLength)) || 2;
 
   const calculateTotalCells = () => numCol * numRow;
   
@@ -38,13 +37,13 @@ const Profile = (props : Props) => {
     } else {
       // Render grid items based on filtered data
       const gridItems = filteredUsersHues.map((hue) => (
-        <div style={{ backgroundColor: hue.color }}></div>
+        <div className='rounded-lg' style={{ backgroundColor: hue.color }}></div>
       ));
 
       // Add a default placeholder div after mapping all the filtered hues
       const totalCells = calculateTotalCells();
       const placeholderDivs = Array.from({ length: totalCells - filteredLength }, () => (
-        <div style={{ backgroundColor: "#FFFFFF", opacity: .1}}></div>
+        <div className='rounded-lg' style={{ backgroundColor: "#FFFFFF", opacity: .1}}></div>
       ));
 
       return [...gridItems, placeholderDivs];
@@ -57,7 +56,7 @@ const Profile = (props : Props) => {
     <div className='flex flex-col py-16 px-8 items-center text-white justify-between w-1/6'>
 
       <div className="w-full flex flex-col justify-center items-center">
-        <div className={`palette grid grid-cols-${numCol} grid-rows-${numRow} aspect-square gap-1 w-full`}>
+        <div className={`palette grid aspect-square gap-1 w-full grid-cols-${numCol} grid-rows-${numRow}`}>
           {/* {filteredUsersHues.map((hue, index) => (
             <div key={index} style={{ backgroundColor: hue.color }}></div>
           ))} */
