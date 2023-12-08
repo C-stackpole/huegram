@@ -23,6 +23,7 @@ const Profile = (props : Props) => {
   const filteredLength = filteredUsersHues ? filteredUsersHues.length : 0;
   const numCol = Math.ceil(Math.sqrt(filteredLength));
   const numRow = Math.ceil(Math.sqrt(filteredLength));
+  console.log(numCol)
 
   const calculateTotalCells = () => numCol * numRow;
   
@@ -30,20 +31,20 @@ const Profile = (props : Props) => {
     if (filteredLength === 0) {
       // Render a default div with a white background to fill up the whole grid when there is no data
       return (
-        <div className="flex justify-center items-center bg-white text-black rounded-3xl font-bold">
+        <div className="flex justify-center items-center bg-white text-black rounded-3xl ">
           Make a Post
         </div>
       );
     } else {
       // Render grid items based on filtered data
       const gridItems = filteredUsersHues.map((hue) => (
-        <div className="rounded-lg" style={{ backgroundColor: hue.color }}></div>
+        <div style={{ backgroundColor: hue.color }}></div>
       ));
 
       // Add a default placeholder div after mapping all the filtered hues
       const totalCells = calculateTotalCells();
       const placeholderDivs = Array.from({ length: totalCells - filteredLength }, () => (
-        <div className="rounded-lg" style={{ backgroundColor: "#FFFFFF", opacity: .1}}></div>
+        <div style={{ backgroundColor: "#FFFFFF", opacity: .1}}></div>
       ));
 
       return [...gridItems, placeholderDivs];
