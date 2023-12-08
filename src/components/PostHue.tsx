@@ -8,19 +8,20 @@ interface Props{
 
 const PostHue = (props:Props) => {
 
-    const[color, setColor] = useState('#')
-    const previewRef = useRef<HTMLDivElement>(null);
-  
-    const handlePostClick = () => {
-      // Call your addHue function with the current color value
-      props.addHue(color);
-  
-      // Reset the input value
-      setColor('#');
-      if (previewRef.current) {
-        previewRef.current.style.backgroundColor = ''
-      }
-    };
+  const[color, setColor] = useState('#')
+  const previewRef = useRef<HTMLDivElement>(null);
+
+  const handlePostClick = () => {
+    // Call your addHue function with the current color value
+    props.addHue(color);
+
+    // Reset the input value
+    setColor('#');
+    if (previewRef.current) {
+      previewRef.current.style.backgroundColor = ''
+    }
+  };
+
 
   return (
     <div className='flex flex-row justify-center p-4 mb-4 gap-8 h-32'>

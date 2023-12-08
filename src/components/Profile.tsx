@@ -1,6 +1,8 @@
 
 
 const Profile = () => {
+  
+  
   return (
     <div className='flex flex-col py-16 px-8 items-center text-white justify-between bg-red-300 w-1/6'>
 
