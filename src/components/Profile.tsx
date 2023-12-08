@@ -56,7 +56,7 @@ const Profile = (props : Props) => {
     <div className='flex flex-col py-16 px-8 items-center text-white justify-between w-1/6'>
 
       <div className="w-full flex flex-col justify-center items-center">
-        <div className={`palette grid aspect-square gap-1 w-full grid-cols-${numCol} grid-rows-${numRow}`}>
+        <div className={`palette grid aspect-square gap-1 w-full grid-rows-${numRow} grid-cols-${numRow}`}>
           {/* {filteredUsersHues.map((hue, index) => (
             <div key={index} style={{ backgroundColor: hue.color }}></div>
           ))} */
