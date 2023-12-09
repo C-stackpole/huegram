@@ -21,10 +21,10 @@ const Profile = (props : Props) => {
   }, [props.hues]);
 
   const filteredLength = filteredUsersHues ? filteredUsersHues.length : 0;
-  const numCol = Math.ceil(Math.sqrt(filteredLength)) || 2;
-  const numRow = Math.ceil(Math.sqrt(filteredLength)) || 2;
+  // const numCol = Math.ceil(Math.sqrt(filteredLength)) || 2;
+  // const numRow = Math.ceil(Math.sqrt(filteredLength)) || 2;
 
-  const calculateTotalCells = () => numCol * numRow;
+  const calculateTotalCells = () => 16;
   
   const renderGridItems = () => {
     if (filteredLength === 0) {
@@ -56,11 +56,10 @@ const Profile = (props : Props) => {
     <div className='flex flex-col py-16 px-8 items-center text-white justify-between w-1/6'>
 
       <div className="w-full flex flex-col justify-center items-center">
-        <div className={`palette grid aspect-square gap-1 w-full grid-rows-${numRow} grid-cols-${numRow}`}>
-          {/* {filteredUsersHues.map((hue, index) => (
-            <div key={index} style={{ backgroundColor: hue.color }}></div>
-          ))} */
-          renderGridItems()}
+        <div className='palette grid aspect-square gap-1 w-full grid-rows-4 grid-cols-4'>
+          {
+          renderGridItems()
+          }
         </div>
 
         <h1 className='p-4'>c_money</h1>
